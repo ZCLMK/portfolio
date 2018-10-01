@@ -1,0 +1,81 @@
+// XL screens
+@include mediaXl {
+  .projects{
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+// desktops, laptops
+@include mediaLg {
+  .projects{
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+}
+
+// tablets, netbooks
+@include mediaMd {
+    main {
+        align-items: center;
+        text-align: center;
+        .lg-heading {
+            line-height: 1;
+            margin-bottom: 1rem;
+            font-size: 2rem;
+        }
+    }
+    ul.menu-nav {
+        float: none;
+        width: 60%;
+        min-height: 0;
+        height: 60vh;
+    }
+    .about-info{
+        grid-template-areas: 
+        "bioimage"
+        "bio"
+        "box1"
+        "box2"
+        "box3";
+        grid-template-columns: 1fr;
+        #bio-img-wrapper img{
+                height:230px;
+                width: 245px;
+        }
+    }
+    .projects{
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .menu-btn{
+      display: unset;
+    }
+
+}
+
+// smartphones
+@include mediaSm {
+  h1.lg-heading, .sm-heading{
+      font-size: 1rem;
+    }
+    main{
+        // padding ici à 0
+     padding: 1.5em 2rem 0rem 2rem;
+    }
+    //make main div wider on small screens
+    #work{
+      padding: 75px 1rem 0 1rem;
+    }
+    ul.menu-nav{
+      width:95%;
+    }
+    .projects{
+      grid-template-columns: 1fr;
+    }
+    #img-home img{
+      left: -100px;
+    }
+    #site-title{
+      font-size: 1.3em;
+    }
+
+}
